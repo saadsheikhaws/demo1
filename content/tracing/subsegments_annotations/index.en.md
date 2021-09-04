@@ -7,9 +7,9 @@ In the previous steps, we were able to further enrich our service observability 
 
 AWS X-Ray SDK also allows you to instrument code in order to create `Subsegments` and add custom `Annotations and Metadada` inside them. These subsegments will then appear in the `Trace details` page and will allow you to capture and fine-tune the performance of each of your methods inside a given function or library. `Annotations` will behave like one of the available attributes one can filter their traces, so you can start injecting business and operational annotations that are meaningful to your queries, like `ITEM_ID`, `USER_ID`, `STATUS`, and others that will later help you to enhance your query groups.  
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 You can learn more on how to leverage the AWS X-Ray SDK to create [Subsegments](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-subsegments.html) and add custom [Annotations and Metadada](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-segment.html) going through our documentation.
-{{% /notice %}}
+:::
 
 We are going to modify the following Lambda functions to add our custom subsgments and annotations:
 

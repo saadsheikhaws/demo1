@@ -5,9 +5,9 @@ weight : 72
 
 `X-Ray Active Tracing` is a feature that automatically captures inbound calls to AWS Services (Lambda, API Gateway, SNS, SQS, and others) without requiring you to instrument any code. SAM and other frameworks also provide built-in support for you to enable active tracing in your resources during development-time.
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Learn more about [X-Ray Active Tracing](https://docs.aws.amazon.com/xray/latest/devguide/xray-usage.html#xray-usage-services) from our documentation.
-{{% /notice %}}
+:::
 
 
 ### Modify the application
@@ -68,6 +68,6 @@ curl -X GET $ApiUrl/items/ | jq
 
 Go to [ServiceLens Service Map](https://console.aws.amazon.com/cloudwatch/home?#servicelens:map) page.
 
-![Service Lens](/images/tracing-1.png)
+![Service Lens](/static/images/tracing-1.png)
 
 You are now able to see the tracing between `Client -> API Gateway -> Lambda` with some additional properties such as each node's latency, requests/secs, and 5xx erros without instrumenting any type of code. But that doesn't really add much value in case we need to perform any deeper troubleshootings, right? In the next step, we are going to start instrumenting calls to other AWS services in our application.

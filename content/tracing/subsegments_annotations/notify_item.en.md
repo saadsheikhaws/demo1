@@ -11,7 +11,7 @@ Go back you your **Cloud9** environment and open your app workspace at ***server
 
 1. Lambda doesn't allow us to add custom annotations and metadata to its root segment, so we first need to create our custom subsegment by updating our handler.
 
-1. Edit the ***serverless-observability-workshop/code/sample-app-tracing/src/handlers/notify-item.js*** file to add an initial subsegment called `## Handler` using the `AWSXRay.captureAsyncFunc()` method on the entire handler method and closing the `subsegment` inside a new `finally` clause in our `try/catch`.
+2. Edit the ***serverless-observability-workshop/code/sample-app-tracing/src/handlers/notify-item.js*** file to add an initial subsegment called `## Handler` using the `AWSXRay.captureAsyncFunc()` method on the entire handler method and closing the `subsegment` inside a new `finally` clause in our `try/catch`.
 
     ```javascript
 
@@ -30,7 +30,7 @@ Go back you your **Cloud9** environment and open your app workspace at ***server
     }
     ```
 
-1. Next, we are ready to add our annotations in case of successful and failed executions to our given Item ID. Inside your `handler`, find and add in the end of your `try` and beginning of your `catch` statements the annotations for `ItemID` and `Status`:
+3. Next, we are ready to add our annotations in case of successful and failed executions to our given Item ID. Inside your `handler`, find and add in the end of your `try` and beginning of your `catch` statements the annotations for `ItemID` and `Status`:
 
     ````javascript
         // Initialization
@@ -45,7 +45,7 @@ Go back you your **Cloud9** environment and open your app workspace at ***server
         }
     ````
 
-1. Next, let's modify the `getItem()` method to receive the `subsegment` as a parameter and create an additional subsegment to capture any business logic inside this method.
+4. Next, let's modify the `getItem()` method to receive the `subsegment` as a parameter and create an additional subsegment to capture any business logic inside this method.
 
     ```javascript
     const getItem = async (record, segment) => {
@@ -64,17 +64,18 @@ Go back you your **Cloud9** environment and open your app workspace at ***server
     ```
 
 
-1. Finally, modify the `handler` method to pass the subsegment to the `getItem()` method.
+5. Finally, modify the `handler` method to pass the subsegment to the `getItem()` method.
    
     ```javascript
     response = await getItem(record, subsegment)
     ```
 
-1. Save your changes to the ***serverless-observability-workshop/code/sample-app-tracing/src/handlers/notify-item.js*** file.
+6. Save your changes to the ***serverless-observability-workshop/code/sample-app-tracing/src/handlers/notify-item.js*** file.
 
 **Your entire file should look like the code below:**
 
-{{% expand "Fully modified file (expand for code)" %}}
+
+::::expand{header="Fully modified file (expand for code)"}
 
 ```javascript
 const AWSXRay = require('aws-xray-sdk-core')
@@ -116,3 +117,4 @@ const getItem = async (record, segment) => {
     }, segment);
 }
 ```
+::::

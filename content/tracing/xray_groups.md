@@ -24,10 +24,10 @@ Updating a group’s filter expression doesn’t change data that’s already re
     ![Service Lens](/images/xray_group_11.png)
 
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 You can also create filter expressions using the custom annotations we created in the previous step, for example, grouping all failed requests by using the filter expression: 
 `Annotation.Status = "FAILED"`
-{{% /notice %}}
+:::
 
 3. **(Optional)** Allow some time (around 9~10 minutes) since your last API testing and invoke once again your API.
 
@@ -49,6 +49,6 @@ You can also create filter expressions using the custom annotations we created i
 
     ![Service Lens](/images/xray_group_2.png)
 
-{{% notice warning %}}
+:::alert{header="Warning" type="warning"}
 After creating a X-Ray Group, previous traces will be available on the `Trace` tab, but only new invocations will generate `CloudWatch Metrics` or be available in the `Service Map` screen. 
-{{% /notice %}}
+:::

@@ -59,30 +59,30 @@ Go to [ServiceLens Traces](https://console.aws.amazon.com/cloudwatch/home?#servi
 
 Scroll down the **Filter type** list. You are now able to visualize the three different annotations we created as additional filters for your traces.
 
-![Service Lens](/images/subsegment_1.png)
+![Service Lens](/static/images/subsegment_1.png)
 
 - Select **Status**.
 - Select **SUCCESS**.
 - Click **Add to filter**.
 
-![Service Lens](/images/subsegment_2.png)
+![Service Lens](/static/images/subsegment_2.png)
 
 - Click one of the traces for **POST** HTTP Method.
 
-![Service Lens](/images/subsegment_3.png)
+![Service Lens](/static/images/subsegment_3.png)
 
 This time, you will be able to see the additional subsegments we created are now appearing with its respective response times.
 
-![Service Lens](/images/subsegment_4.png)
+![Service Lens](/static/images/subsegment_4.png)
 
 - Click the **## Handler** subsegment and scroll down to `Segment details` area. You should be able to see the custom annotations you added inside that subsegment.
 
-![Service Lens](/images/subsegment_5.png)
+![Service Lens](/static/images/subsegment_5.png)
 
 - Click the **## putItemData** subsegment and scroll down to `Segment details` area. You should be able to see the custom metadata you added inside that subsegment.
 
-![Service Lens](/images/subsegment_6.png)
+![Service Lens](/static/images/subsegment_6.png)
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Spare a couple minutes to analyze the Service Map and Traces for the **Get Item By Id** and **Get All Items** as well.
-{{% /notice %}}
+:::

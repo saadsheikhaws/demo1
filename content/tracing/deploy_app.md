@@ -5,9 +5,9 @@ weight : 71
 
 First of all, let's get to our sample application for this exercise.
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Spare a couple of minutes to understand which resources are being provisioned in the ***serverless-observability-workshop/code/sample-app-tracing/template.yaml*** file as well as its Lambda functions.
-{{% /notice %}}
+:::
 
 For the sake of showing a more complete example of active tracing in place, we will be adding a second link to our `Put Item` service in a way that for each new item recorded, a message will be sent to a SNS Topic which will later trigger another Lambda function to notify an administrator about this new item insertion.
 
@@ -36,7 +36,7 @@ After we deploy this application, the following resources will be provisioned in
     sam deploy -g
     ```
 
-1. Enter the following settings when prompted:
+2. Enter the following settings when prompted:
 
     ```sh
             Setting default arguments for 'sam deploy'
@@ -53,7 +53,7 @@ After we deploy this application, the following resources will be provisioned in
             Save arguments to samconfig.toml [Y/n]: Y 
     ```
 
-1. Wait for a few minutes and then enter the following when prompted again:
+3. Wait for a few minutes and then enter the following when prompted again:
 
     ```sh
     Changeset created successfully. arn:aws:cloudformation:us-east-1:1234567890:changeSet/samcli-deploy135353414/3d893bb8-2ecf-4491-9022-0644f5534da
@@ -64,7 +64,7 @@ After we deploy this application, the following resources will be provisioned in
     Deploy this changeset? [y/N]: Y
     ```
 
-1. Follow [this deep link to CloudFormation](https://console.aws.amazon.com/cloudformation/home#/stacks?filteringText=sam-&filteringStatus=active&viewNested=true&hideStacks=false&stackId=) to keep up with the stack deployment.
+4. Follow [this deep link to CloudFormation](https://console.aws.amazon.com/cloudformation/home#/stacks?filteringText=sam-&filteringStatus=active&viewNested=true&hideStacks=false&stackId=) to keep up with the stack deployment.
 
 ![Sample Architecture](/images/samstacks_tracing.png)
 
@@ -83,9 +83,9 @@ export ApiUrl=$(aws cloudformation describe-stacks --stack-name monitoring-app-t
 echo "export ApiUrl="$ApiUrl
 ```
 
-{{% notice warning %}}
+:::alert{header="Warning" type="warning"}
 Note down your API Url endpoint because it might end up being a requirement in a later module.
-{{% /notice %}}
+:::
 
 
 #### Test the `Put Item` operation
