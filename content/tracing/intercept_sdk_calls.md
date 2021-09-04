@@ -7,7 +7,7 @@ In this step, we are going to add a small change to our application using the AW
 
 :::alert{header="Tip" type="info"}
 You can learn more on how to leverage the AWS X-Ray SDK to capture traces all [AWS SDK calls](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-awssdkclients.html), [Incoming Requests](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-middleware.html), [Outgoing HTTP Calls](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-httpclients.html), and [SQL Queries](https://docs.aws.amazon.com/xray/latest/devguide/xray-sdk-nodejs-sqlclients.html)
-:::alert{header="Tip" type="info"}
+:::
 
 ### Modify the application
 

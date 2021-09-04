@@ -11,4 +11,4 @@ Only complete this section if you are at an AWS hosted event (such as re:Invent,
 are running the workshop on your own, go to: [Start the workshop on your own](../self_paced/).
 :::
 
-{{% children %}}
+::children

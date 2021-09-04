@@ -13,7 +13,7 @@ Updating a group’s filter expression doesn’t change data that’s already re
 
 1. Go to [AWS XRay](https://console.aws.amazon.com/xray/home#service-map) and click on the **Default** drop down and select **Create group**.
 
-    ![Service Lens](/images/xray_group.png)
+    ![Service Lens](/static/images/xray_group.png)
 
 2. In the new window, name the group **Higherlatency** and enter the following expression. This is a simple expression that filters only requests that exhibit more than 2 seconds response time.
 
@@ -21,7 +21,7 @@ Updating a group’s filter expression doesn’t change data that’s already re
     responsetime > 2
     ```
 
-    ![Service Lens](/images/xray_group_11.png)
+    ![Service Lens](/static/images/xray_group_11.png)
 
 
 :::alert{header="Tip" type="info"}
@@ -39,7 +39,7 @@ You can also create filter expressions using the custom annotations we created i
 
 4. **(Optional)** Once created and selected, you will see that the Service Map changes to show only the services and routes that exhibit more than 2 seconds response time.
 
-    ![Service Lens](/images/xray_group_1.png)
+    ![Service Lens](/static/images/xray_group_1.png)
 
     When a Group is created, X-Ray also publishes new metrics.
 
@@ -47,7 +47,7 @@ You can also create filter expressions using the custom annotations we created i
 
     You will see a new metric called `ApproximateTraceCount` created for the group `Higherlatency` which you just created.
 
-    ![Service Lens](/images/xray_group_2.png)
+    ![Service Lens](/static/images/xray_group_2.png)
 
 :::alert{header="Warning" type="warning"}
 After creating a X-Ray Group, previous traces will be available on the `Trace` tab, but only new invocations will generate `CloudWatch Metrics` or be available in the `Service Map` screen. 

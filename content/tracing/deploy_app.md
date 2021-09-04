@@ -13,7 +13,7 @@ For the sake of showing a more complete example of active tracing in place, we w
 
 After we deploy this application, the following resources will be provisioned in our AWS account:
 
-![Sample Architecture](/images/tracing_app.png?width=40pc)
+![Sample Architecture](/static/images/tracing_app.png?width=40pc)
 
 ### Deploying your application
 
@@ -66,11 +66,11 @@ After we deploy this application, the following resources will be provisioned in
 
 4. Follow [this deep link to CloudFormation](https://console.aws.amazon.com/cloudformation/home#/stacks?filteringText=sam-&filteringStatus=active&viewNested=true&hideStacks=false&stackId=) to keep up with the stack deployment.
 
-![Sample Architecture](/images/samstacks_tracing.png)
+![Sample Architecture](/static/images/samstacks_tracing.png)
 
 Wait until both stacks complete its deployment and take note of your API URL endpoint for later testing.
 
-![Sample Architecture](/images/samstackcomplete_tracing.png)
+![Sample Architecture](/static/images/samstackcomplete_tracing.png)
 
 ### Test the APIs 
 
