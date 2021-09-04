@@ -71,7 +71,7 @@ Let's define the following Business & Operational metrics:
 
     **Your putItemHandler method should look like the one below**
 
-    {{% expand "Full putItemHandler method (expand for code)" %}}
+    ::::expand{header="Full putItemHandler method (expand for code)"}
   ```javascript
     exports.putItemHandler = async (event, context) => {
       let response
@@ -110,7 +110,7 @@ Let's define the following Business & Operational metrics:
       return response
   }
   ```
-    {{% /expand %}}
+    ::::
 
 ### Deploy the application
 

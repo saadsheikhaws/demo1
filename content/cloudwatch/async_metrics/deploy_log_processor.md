@@ -5,9 +5,9 @@ weight : 11
 
 In order for us to handle our log entries in background we need two complimentary applications that we could either build ourselves or deploy from a SAR (Serverless Application Repository) already provided by a partner called Lumigo, which are responsible for auto-subscribing specific CloudWatch Log Groups to a certain Kinesis Stream, and another one that consumes data from this Stream, parses it and pushed to CloudWatch Metrics. These apps are called [SAR-Logging](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:374852340823:applications/auto-subscribe-log-group-to-arn) and [SAR-Async-Lambda-Metrics](https://console.aws.amazon.com/lambda/home?region=us-east-1#/create/app?applicationId=arn:aws:serverlessrepo:us-east-1:374852340823:applications/async-custom-metrics).
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Spare a couple of minutes to understand how these two SAR apps are being deployed by examining the SAM Template on ***serverless-observability-workshop/code/log-processing/template.yaml*** file.
-{{% /notice %}}
+:::
 
 By inspecting the ***serverless-observability-workshop/code/log-processing/template.yaml*** file, you can understand the patterns that Amazon CloudWatch Logs will attempt to filter and route to this module.
 

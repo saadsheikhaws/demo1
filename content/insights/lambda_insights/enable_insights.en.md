@@ -5,9 +5,9 @@ weight : 91
 
 `Amazon CloudWatch Lambda Insights` CloudWatch Lambda Insights is a monitoring and troubleshooting solution for serverless applications running on AWS Lambda. The solution collects, aggregates, and summarizes system-level metrics including CPU time, memory, disk, and network. It also collects, aggregates, and summarizes diagnostic information such as cold starts and Lambda worker shutdowns to help you isolate issues with your Lambda functions and resolve them quickly.
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Learn more about [Amazon CloudWatch Lambda Insights](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-insights.html) from our documentation.
-{{% /notice %}}
+:::
 
 
 ### Modify the application
@@ -37,9 +37,9 @@ Globals:
 
 Save your changes to the ***serverless-observability-workshop/code/sample-app/template.yaml*** file.
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Learn more about [all available Lambda Insights Extensions versions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Lambda-Insights-extension-versions.html) from our documentation.
-{{% /notice %}}
+:::
 
 ### Deploy your application
 
@@ -54,5 +54,5 @@ In order to make sure Lambda Insights is properly setup, go to [AWS Lambda](http
 
 Click **your-function** > **Configuration** > **Monitoring tools** and make sure `Enhanced Monitoring` is enabled.
 
-![Lambda Insights](/images/li_1.png)
+![Lambda Insights](/static/images/li_1.png)
 

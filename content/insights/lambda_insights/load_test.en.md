@@ -23,12 +23,12 @@ cd ~/environment/serverless-observability-workshop/code/sample-app
 locust -f locust-script.py -H ${ApiUrl} --headless -u 250 -r 10 -t 10m
 ```
 
-{{% notice warning %}}
+:::alert{header="Warning" type="warning"}
 Remember that this test is going to take **10 minutes** to complete. 
-{{% /notice %}}
+:::
 
 After its completion you should see you terminal with an output like the following:
 
-![Lambda Insights](/images/li_2.png)
+![Lambda Insights](/static/images/li_2.png)
 
 Did you notice that the `/POST` operation presented no errors and maintained its latency relatively low while the two other `/GET` operations presented a really elevated error rate and overall latency?. In the next step, we will try to understand why.

@@ -5,9 +5,9 @@ weight : 31
 
 To ease some of the complexity of structuring the code to push metrics to CloudWatch, you'll find a lib folder under ***/serverless-observability-workshop/code/sample-app/src/lib*** containing some helper functions. Let's spend some time understanding two different ways we can publish metrics to CloudWatch.
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Spare a couple of minutes to understand the methods and enums created the ***/serverless-observability-workshop/code/sample-app/src/lib/logging/logger.js*** and ***/serverless-observability-workshop/code/sample-app/src/lib/helper/models.js*** files.
-{{% /notice %}}
+:::
 
 ### Metric Units
 
@@ -15,7 +15,7 @@ When you are pushing metrics to CloudWatch Metrics, you have to define the unit 
 
 **You can visualize the entire unit list expanding the section below**
 
-{{% expand "Full Enum object (expand for code)" %}}
+::::expand{header="Full Enum object (expand for code)"}
 ```javascript
 /**
    * Enum CloudWatch Metric unit.
@@ -51,7 +51,7 @@ When you are pushing metrics to CloudWatch Metrics, you have to define the unit 
     CountPerSecond: 'Second'
   })
 ```
-{{% /expand  %}}
+::::
 
 ### Pushing Metrics To CloudWatch Metrics
 
@@ -63,7 +63,7 @@ The simplest way to push your metrics is by synchronously invoking the `putMetri
 
 **You can visualize the full helper functions expanding the section below**
 
-{{% expand "Full helper functions (expand for code)" %}}
+::::expand{header="Full helper functions (expand for code)"}
 ```javascript
 /**
  * Puts Custom Metric on CloudWatch Metrics. 
@@ -172,7 +172,7 @@ const buildDimensions = (service, extra_dimensions) => {
     return dimensions
 }
 ```
-{{% /expand  %}}
+::::
 
 #### Pushing Metric Asynchronously
 
@@ -183,7 +183,7 @@ In order to log our metrics in a unique format that won't mess with the rest of 
 **You can visualize the full helper functions expanding the section below**
 
 
-{{% expand "Full helper functions (expand for code)" %}}
+::::expand{header="Full helper functions (expand for code)"}
 ```javascript
 /**
  * Logs Custom Metric on CloudWatch Logs in JSON format. 
@@ -309,7 +309,7 @@ const buildDimensionsStatsDFormat = (service, extra_dimensions) => {
     return dimensions
 }
 ```
-{{% /expand  %}}
+::::
 
 #### Pushing Metrics using Embedded Metric Format (EMF)
 
@@ -317,7 +317,7 @@ In order to leverage EMF to push metrics to CloudWatch through structured log, w
 
 **You can visualize the full helper functions expanding the section below**
 
-{{% expand "Full helper functions (expand for code)" %}}
+::::expand{header="Full helper functions (expand for code)"}
 ```javascript
 /**
  * Logs Custom Metric on CloudWatch Metrics using Embedded Metric Format (EMF).
@@ -383,4 +383,4 @@ const buildEMFDimensions = (dimensions) => {
     return dimensions
 }
 ```
-{{% /expand  %}}
+::::

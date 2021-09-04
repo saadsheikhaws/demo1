@@ -5,4 +5,4 @@ weight : 120
 ---
 
 # Cleanup
-![Cleaned Environment](/images/cleanup.svg)
+![Cleaned Environment](/static/images/cleanup.svg)

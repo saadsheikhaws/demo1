@@ -28,21 +28,21 @@ npm install -g typescript aws-cdk
 cdk deploy -c stack_name=monitoring-app
 ```
 
-{{% notice tip %}}
+:::alert{header="Tip" type="info"}
 Spare a couple of minutes to understand how these two SAR apps are being deployed by examining the SAM Template on ***serverless-observability-workshop/code/cloudwatch-cdk/lib/cloudwatch-cdk-stack.ts*** file.
-{{% /notice %}}
+:::
 
 Go to your [CloudWatch Dashboard Console](https://console.aws.amazon.com/cloudwatch/home?#dashboards:).
 
-![dashboard-1](/images/dashboard_1.png)
+![dashboard-1](/static/images/dashboard_1.png)
 
 This CDK project creates two dashboards based on several widgets with different representations (Lines and Numbers) to demonstrate the different possibilities one can monitor its application health. 
 
 One Operational Dashboard for SysOps-related metrics.
 
-![dashboard-2](/images/dashboard_2.png)
+![dashboard-2](/static/images/dashboard_2.png)
 
 And also a Business Dashboard for keeping up with business-related metrics.
 
-![dashboard-3](/images/dashboard_3.png)
+![dashboard-3](/static/images/dashboard_3.png)
 

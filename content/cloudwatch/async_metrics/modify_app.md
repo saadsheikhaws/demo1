@@ -71,7 +71,7 @@ Let's define the following Business & Operational metrics:
 
     **Your getByIdHandler method should look like the one below**
 
-    {{% expand "Full getByIdHandler method (expand for code)" %}}
+    ::::expand{header="Full getByIdHandler method (expand for code)"}
 
   ```javascript
     exports.getByIdHandler = async (event, context) => {
@@ -112,7 +112,7 @@ Let's define the following Business & Operational metrics:
     }
   ```
 
-    {{% /expand %}}
+    ::::
 
 
 ### Deploy the application

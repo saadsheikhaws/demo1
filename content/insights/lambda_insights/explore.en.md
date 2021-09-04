@@ -32,9 +32,9 @@ Click the **monitoring-app-getAllItemsFunction**  function to analyze.
 
 ### Bonus Round
 
-{{% notice warning %}}
+:::alert{header="Warning" type="warning"}
 This step requires you to go through the [Distributed Tracing](../../../070_tracing) module. In case you haven't done it, it's still worth reading through the example.
-{{% /notice %}}
+:::
 
 #### ServiceLens and X-Ray Integration
 

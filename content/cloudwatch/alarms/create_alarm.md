@@ -10,15 +10,15 @@ A metric alarm watches a single CloudWatch metric or the result of a math expres
 Go to your [CloudWatch Alarms Console](https://console.aws.amazon.com/cloudwatch/home?#alarmsV2:).
 
 1. Click on **Create Alarm**.
-1. Click **Select Metric**.
-1. This will take you to the Metrics home page, where you will see all the Namespaces available in the account. Select the `MonitoringApp` namespace
+2. Click **Select Metric**.
+3. This will take you to the Metrics home page, where you will see all the Namespaces available in the account. Select the `MonitoringApp` namespace
 
-![alarm-1](/images/alarm_1.png?width=60pc)
+![alarm-1](/static/images/alarm_1.png?width=60pc)
 
 4. Select `FunctionName, FunctionVersion, operation, service` dimension and select the `SuccessfulGetItem` metric we created in the previous exercise.
 
-![alarm-2](/images/alarm_2.png?width=60pc)
-![alarm-3](/images/alarm_3.png?width=60pc)
+![alarm-2](/static/images/alarm_2.png?width=60pc)
+![alarm-3](/static/images/alarm_3.png?width=60pc)
 
 5. Enter the threshold value (**for example, 1**) that you want the metric data to be monitored. Notice that **Static** option is selected by default, which means we will be setting a static value as the threshold to be monitored.
 
@@ -36,20 +36,20 @@ The available options for actions include, - `Send a notification to an SNS topi
 
 9. Select **Create a new topic** to create a new SNS topic to send the notification to and provide your email address.
 
-![alarm-4](/images/alarm_4.png?width=50pc)
+![alarm-4](/static/images/alarm_4.png?width=50pc)
 
 10. Name it `my_observability_topic`, fill your `e-mail address` and click **Create topic**.
 11. Click **Next**.
 12. Name it `My Observability Alarm`.
 13. Click **Next**.
 
-![alarm-4](/images/alarm_name.png?width=50pc)
+![alarm-4](/static/images/alarm_name.png?width=50pc)
 
 14. Review your settings and click **Create alarm**.
 15. Open you e-mail inbox and confirm your SNS topic subscription 
-![alarm-4](/images/alarm_confirm.png?width=50pc)
+![alarm-4](/static/images/alarm_confirm.png?width=50pc)
 
 
-{{% notice warning %}}
+:::alert{header="Warning" type="warning"}
 If you don't confirm your e-mail subscription, you will not receive any notification emails for triggered alarms. **Always remember to also check your spam folder**.
-{{% /notice %}}
+:::

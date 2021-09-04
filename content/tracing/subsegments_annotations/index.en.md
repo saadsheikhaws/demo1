@@ -13,4 +13,4 @@ You can learn more on how to leverage the AWS X-Ray SDK to create [Subsegments](
 
 We are going to modify the following Lambda functions to add our custom subsgments and annotations:
 
-{{%children style="h4"%}}
+::children
