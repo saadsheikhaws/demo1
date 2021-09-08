@@ -7,7 +7,7 @@ Many organizations, from small startups to large enterprises, are adopting more 
 
 This workshop will walk you through some of the best practices to instrument logging, tracing and monitoring in a serverless application in such way one can obtain the so called observability. AWS provides services that can help customers to address the requirements of the three main pillars of Observability:
 
-{{%children style="h2" description="true" %}}
+::children
 
 <!-- 
 When creating our sample application, we are going to deploy an application containing the following resources:
